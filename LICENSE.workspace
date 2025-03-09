@@ -1,3 +1,7 @@
+This license covers the Visual Studio Code config files only that are included
+in this git repository. All other repositories in the workspace directory will
+have their own LICENSE files.
+
 BSD 3-Clause License
 
 Copyright (c) 2025, Sound Open Firmware
