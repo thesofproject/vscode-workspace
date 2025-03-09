@@ -1,0 +1,22 @@
+# Ignore all the repos
+sof-*
+sof
+alsa-*
+modules
+zephyr
+
+# Ignore the build directories
+build*
+
+# Ignore testbench directories
+testbench*
+
+# Ignore tools
+tools
+
+# Ignore any keys used to sign FW builds
+keys
+
+# Ignore any tool/extension data
+.vscode-ctags
+.west/config

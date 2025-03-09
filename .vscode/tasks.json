@@ -1,0 +1,299 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "SOF Build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"linux": {
+				"command": "./sof/scripts/vscode-task.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/vscode-task.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/vscode-task.sh"
+			},
+			"args": [
+				"${input:platform}",
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Pristine Build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/vscode-task.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/vscode-task.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/vscode-task.sh"
+			},
+			"args": [
+				"-u",
+				"-p",
+				"${input:platform}"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Tools and Topology Build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"args": [
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Tools and Topology Pristine Build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"args": [
+				"-c",
+				"-l",
+				"-p",
+				"-T",
+				"-X",
+				"-Y",
+				"-t"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Tools and Topology Rebuild Cmake",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/build-tools.sh"
+			},
+			"args": [
+				"-C",
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Docs Build",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/gen-doc.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/gen-doc.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/gen-doc.sh"
+			},
+			"args": [
+				"-b",
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Docs Clean",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/gen-doc.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/gen-doc.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/gen-doc.sh"
+			},
+			"args": [
+				"-c",
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Testbench Build Host",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/rebuild-testbench.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/rebuild-testbench.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/rebuild-testbench.sh"
+			},
+			"args": [
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Testbench Build Sim",
+			"type": "shell",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"linux": {
+				"command": "./sof/scripts/rebuild-testbench.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/rebuild-testbench.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/rebuild-testbench.sh"
+			},
+			"args": [
+				"-p",
+				"${input:platform}"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Testbench Run Host",
+			"type": "shell",
+			"linux": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"args": [
+				"-m",
+				"${input:module}",
+				"-k"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Testbench Run Sim",
+			"type": "shell",
+			"linux": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"args": [
+				"-x",
+				"-m",
+				"${input:module}",
+				"-k"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+		{
+			"label": "SOF Testbench Run Valgrind",
+			"type": "shell",
+			"linux": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"windows": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"osx": {
+				"command": "./sof/scripts/sof-testbench-helper.sh"
+			},
+			"args": [
+				"-v",
+				"-m",
+				"${input:module}"
+			],
+			"problemMatcher": [
+				"$gcc"
+			]
+		},
+	],
+	"inputs": [
+		{
+			"id": "platform",
+			"type": "pickString",
+			"default": "[ptl]",
+			"options": ["ptl", "lnl", "mtl", "tgl"],
+			"description": "Enter the platform name - options ptl, lnl, mtl, tgl"
+		},
+		{
+			"id": "module",
+			"type": "pickString",
+			"default": "[drc]",
+			"options": ["asrc", "dcblock", "drc", "drc_multiband", "eqfir", "eqiir", "gain", "src", "tdfb"],
+			"description": "Enter the module name - options asrc dcblock drc drc_multiband eqfir eqiir gain src tdfb"
+		},
+	]
+}

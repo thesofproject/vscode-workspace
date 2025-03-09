@@ -1,0 +1,31 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cpptools-themes",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.vscode-pylance-insiders",
+        "ms-python.debugpy",
+        "ms-vscode.vscode-embedded-tools",
+        "ms-vscode.vscode-serial-monitor",
+        "donjayamanne.python-environment-manager",
+        "ms-vscode.cmake-tools",
+        "ms-vscode.hexeditor",
+        "microhobby.linux",
+        "ms-vscode.makefile-tools",
+        "shd101wyy.markdown-preview-enhanced",
+        "paulosilva.vsc-octave-debug",
+        "ms-vscode.cpptools",
+        "nordic-semiconductor.nrf-kconfig",
+        "maelvalais.autoconf",
+        "sukumo28.wav-preview",
+        "rogalmic.bash-debug",
+        "tamasfe.even-better-toml",
+        "cschlosser.doxdocgen",
+        "toasty-technologies.octave",
+        "jebbs.plantuml",
+        "redhat.vscode-yaml",
+        "hediet.vscode-drawio"
+    ]
+}

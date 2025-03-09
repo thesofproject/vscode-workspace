@@ -1,0 +1,13 @@
+{
+        // Hush CMake
+		"cmake.configureOnOpen": false,
+
+		// IntelliSense - at this level it should not matter which xtensa ISA is being used
+		"C_Cpp.default.compilerPath": "${userHome}/zephyr-sdk-0.17.0/xtensa-intel_ace30_ptl_zephyr-elf/bin/xtensa-intel_ace30_ptl_zephyr-elf-gcc",
+		"C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+
+		// File Associations
+		"files.associations": {
+		},
+		"cmake.sourceDirectory": "${userHome}/work/sof/sof"
+}
